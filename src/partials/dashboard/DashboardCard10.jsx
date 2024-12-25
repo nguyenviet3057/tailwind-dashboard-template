@@ -69,7 +69,7 @@ function DashboardCard10() {
     dispatch(setMessages([]));
     let stompClient;
     if (topicCurrentIndex !== undefined && topicCheckedList[topicCurrentIndex]) {
-      const socket = new SockJS('http://localhost:8080/ws');
+      const socket = new SockJS(import.meta.env.VITE_WEBSOCKET_URL);
       stompClient = new Client({
         webSocketFactory: () => socket,
         onConnect: (frame) => {
