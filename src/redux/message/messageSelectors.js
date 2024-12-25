@@ -1,0 +1,1 @@
+export const messageListSelector = (state) => state.message.messages;
