@@ -73,6 +73,7 @@ function Sidebar({
 
     dispatch(setCurrentIndex(undefined));
 
+    console.log(import.meta.env.VITE_WEBSOCKET_URL)
     const socket = new SockJS(import.meta.env.VITE_WEBSOCKET_URL);  // Tạo kết nối SockJS
     const stompClient = new Client({
       webSocketFactory: () => socket,  // Chỉ định WebSocket factory
